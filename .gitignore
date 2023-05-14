@@ -1,0 +1,12 @@
+# Files
+*.iso
+
+# Budgie
+Budgie/ezreleng/
+Budgie/work/
+Budgie/out/
+
+# XFCE
+XFCE/ezreleng/
+XFCE/work/
+XFCE/out/
