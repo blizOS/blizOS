@@ -1,0 +1,13 @@
+[Unit]
+Description=Initializes Pacman keyring And Syncs Them
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/pacman-key --init
+ExecStart=/usr/bin/pacman-key --populate
+ExecStart=/usr/bin/pacman -Sy
+ExecStart=rm -rf /etc/systemd/system/ez-pacman-init.service
+
+[Install]
+WantedBy=multi-user.target

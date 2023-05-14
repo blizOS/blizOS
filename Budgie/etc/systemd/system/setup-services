@@ -1,0 +1,12 @@
+[Unit]
+Description=Setup system services
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=systemctl enable --now cronie.service
+ExecStart=systemctl enable --now bluetooth.service
+ExecStart=rm -rf /etc/systemd/system/setup-services.service
+
+[Install]
+WantedBy=multi-user.target
