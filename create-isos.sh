@@ -21,7 +21,8 @@ echo "Creating needed files"
 mkdir -p out/
 
 echo "Starting build for Budgie (Main Edition)"
-Budgie/steps.sh
+cd Budgie/
+./steps.sh
 echo "Cleaning up Budgie (Main Edition) build files..."
 rm -rf Budgie/work
 rm -rf Budgie/ezreleng
@@ -29,7 +30,8 @@ mv Budgie/out/* out/
 rm -rf Budgie/out
 
 echo "Starting build for XFCE (Lite Edition)"
-XFCE/steps.sh
+cd XFCE/
+./steps.sh
 echo "Cleaning up XFCE (Lite Edition) build files..."
 rm -rf XFCE/work
 rm -rf XFCE/ezreleng
