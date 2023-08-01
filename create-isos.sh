@@ -23,6 +23,7 @@ mkdir -p out/
 echo "Starting build for Budgie (Main Edition)"
 cd Budgie/
 ./steps.sh
+cd ../
 echo "Cleaning up Budgie (Main Edition) build files..."
 rm -rf Budgie/work
 rm -rf Budgie/ezreleng
@@ -32,6 +33,7 @@ rm -rf Budgie/out
 echo "Starting build for XFCE (Lite Edition)"
 cd XFCE/
 ./steps.sh
+cd ../
 echo "Cleaning up XFCE (Lite Edition) build files..."
 rm -rf XFCE/work
 rm -rf XFCE/ezreleng
