@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 alsa-utils
 amd-ucode
+btrfs-progs
 virtualbox-guest-utils
 open-vm-tools
 arch-install-scripts
