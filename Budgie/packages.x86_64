@@ -137,6 +137,7 @@ udftools
 udisks2
 upower
 xdg-user-dirs
+xdg-desktop-portal-gtk
 xz
 zstd
 
@@ -149,6 +150,10 @@ gvfs-mtp
 gvfs-nfs
 gvfs-smb
 
+# Beta Packages
+auto-cpufreq
+optimus-manager
+optimus-manager-qt
 
 # Pulseaudio - comment pipewire packages if using pulseaudio
 #pulseaudio
@@ -204,6 +209,12 @@ nss-mdns
 wget
 whois
 git
+
+# Fonts
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
 terminus-font
 
 # Budgie
@@ -217,7 +228,6 @@ kvantum-theme-materia
 bibata-cursor-theme
 neofetch
 ibus-typing-booster
-noto-fonts-emoji
 nemo
 nemo-fileroller
 

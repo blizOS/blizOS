@@ -6,6 +6,8 @@ Type=oneshot
 RemainAfterExit=yes
 ExecStart=systemctl enable --now cronie.service
 ExecStart=systemctl enable --now bluetooth.service
+ExecStart=systemctl enable --now auto-cpufreq.service
+ExecStart=systemctl enable --now optimus-manager.service
 ExecStart=rm -rf /etc/systemd/system/setup-services.service
 
 [Install]

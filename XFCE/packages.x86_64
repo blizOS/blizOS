@@ -149,6 +149,10 @@ gvfs-mtp
 gvfs-nfs
 gvfs-smb
 
+# Beta Packages
+auto-cpufreq
+optimus-manager
+optimus-manager-qt
 
 # Pulseaudio - comment pipewire packages if using pulseaudio
 #pulseaudio
@@ -204,6 +208,12 @@ nss-mdns
 wget
 whois
 git
+
+# Fonts
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
 terminus-font
 
 # Xfce
