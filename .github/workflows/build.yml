@@ -1,0 +1,33 @@
+name: Lint Code
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  formatting:
+    name: cargo fmt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          components: rustfmt
+      - name: Format
+        uses: actions-rust-lang/rustfmt@v1.0.0
+  clippy:
+    name: cargo clippy
+    runs-on: ubuntu-latest
+    container: docker.io/library/archlinux:latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: |
+          pacman-key --init
+          pacman-key --populate
+          pacman -Syu --needed --noconfirm
+          pacmnan -S git archiso --needed --noconfirm
+          git clone https://github.com/blizOS/blizOS.git
+          cd blizOS
+          ./steps.sh
