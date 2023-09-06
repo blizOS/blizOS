@@ -1,4 +1,4 @@
-name: Lint Code
+name: Build Image
 on:
   workflow_dispatch:
   push:
@@ -7,18 +7,8 @@ on:
     branches: [ main ]
 
 jobs:
-  formatting:
-    name: cargo fmt
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions-rust-lang/setup-rust-toolchain@v1
-        with:
-          components: rustfmt
-      - name: Format
-        uses: actions-rust-lang/rustfmt@v1.0.0
   clippy:
-    name: cargo clippy
+    name: build iso
     runs-on: ubuntu-latest
     container: docker.io/library/archlinux:latest
     steps:
