@@ -17,7 +17,7 @@ jobs:
           pacman-key --init
           pacman-key --populate
           pacman -Syu --needed --noconfirm
-          pacmnan -S git archiso --needed --noconfirm
+          pacman -S git archiso --needed --noconfirm
           git clone https://github.com/blizOS/blizOS.git
           cd blizOS
           ./steps.sh
