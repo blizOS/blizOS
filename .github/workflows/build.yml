@@ -20,4 +20,4 @@ jobs:
           pacman -S git archiso --needed --noconfirm
           git clone https://github.com/blizOS/blizOS.git
           cd blizOS
-          ./steps.sh
+          bash steps.sh
