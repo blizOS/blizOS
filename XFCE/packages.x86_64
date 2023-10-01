@@ -196,7 +196,6 @@ modemmanager
 net-tools
 netctl
 networkmanager
-networkmanager-fortisslvpn
 networkmanager-l2tp
 networkmanager-openconnect
 networkmanager-openvpn
