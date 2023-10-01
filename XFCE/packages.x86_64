@@ -3,6 +3,7 @@
 alsa-utils
 amd-ucode
 btrfs-progs
+grub-btrfs
 virtualbox-guest-utils
 open-vm-tools
 arch-install-scripts
