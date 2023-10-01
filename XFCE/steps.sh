@@ -69,25 +69,25 @@ pacman -S --needed --noconfirm archiso mkinitcpio-archiso
 # Copy ezreleng to working directory
 cpezreleng () {
 cp -r /usr/share/archiso/configs/releng/ ./ezreleng
-rm -r ./ezreleng/airootfs/etc/pacman.d/hooks
-rm ./ezreleng/airootfs/etc/motd
-rm -r ./ezreleng/grub
-rm -r ./ezreleng/efiboot
-rm -r ./ezreleng/syslinux
+rm -rf ./ezreleng/airootfs/etc/pacman.d/hooks
+rm -rf ./ezreleng/airootfs/etc/motd
+rm -rf ./ezreleng/grub
+rm -rf ./ezreleng/efiboot
+rm -rf ./ezreleng/syslinux
 }
 
 # Remove auto-login, cloud-init, hyper-v, ied, sshd, & vmware services
 rmunitsd () {
-rm -r ./ezreleng/airootfs/etc/systemd/system/getty@tty1.service.d
-rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/qemu-guest-agent.service
-rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_fcopy_daemon.service
-rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_kvp_daemon.service
-rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_vss_daemon.service
-rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/vmware-vmblock-fuse.service
-rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/vmtoolsd.service
-rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/sshd.service
-rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/iwd.service
-rm -r ./ezreleng/airootfs/etc/systemd/system/cloud-init.target.wants
+rm -rf ./ezreleng/airootfs/etc/systemd/system/getty@tty1.service.d
+rm -rf ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/qemu-guest-agent.service
+rm -rf ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_fcopy_daemon.service
+rm -rf ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_kvp_daemon.service
+rm -rf ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_vss_daemon.service
+rm -rf ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/vmware-vmblock-fuse.service
+rm -rf ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/vmtoolsd.service
+rm -rf ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/sshd.service
+rm -rf ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/iwd.service
+rm -rf ./ezreleng/airootfs/etc/systemd/system/cloud-init.target.wants
 }
 
 # Add cups, haveged, NetworkManager, & lightdm systemd links
